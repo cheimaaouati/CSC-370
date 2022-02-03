@@ -1,0 +1,47 @@
+import java.util.Scanner;
+public class Main
+{
+   public static void main(String[] args)
+   {
+   // Scanner definition
+   Scanner sc = new Scanner(System.in);
+       System.out.print("Enter The Size Of Users: ");
+      
+       // read size of users
+       int N = sc.nextInt();
+      
+       // declares an Array of integers
+       int[] rights = new int[N];
+System.out.print("Please Enter the "+N+" Elements For the users: ");
+       for(int i=0;i<N;i++)
+       {
+       // read N users Elements
+       rights[i] = sc.nextInt();
+       }
+      
+       System.out.print("Enter The minPermission Value: ");
+      
+       // read minPermission value from users
+       int minPermission = sc.nextInt();
+      
+       // declare empty strings
+       String s="";
+      
+       // finding the access level
+       for(int i=0;i<N;i++)
+       {
+       if(rights[i] >= minPermission)
+       {
+       s = s + 'A';
+       }
+       else
+       {
+       s = s + 'D';
+       }
+       }
+      
+       // show the output
+       System.out.println("Returns: "+s);
+      
+   }
+}
