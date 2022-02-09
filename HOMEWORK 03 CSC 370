@@ -1,0 +1,16 @@
+
+# Online Python - IDE, Editor, Compiler, Interpreter
+class Dirsort:
+    def __init__ (self, dirs):
+        self.d = []
+        for dr in dirs:
+            c = dr.count ('/')
+            self.d.append ((c,dr))
+    def order (self):
+        self.d.sort (key = lambda x:(x[0],x[1]))
+        return [tup[1] for tup in self.d]
+        
+d = Dirsort (["/", "/usr/", "/usr/local/", "usr/local/bin/", "/games/", "/games/snake/", "/homework/", "/temp/downloads/"])
+print (d.order())
+d = Dirsort (["/usr/", "/usr/local/", "/bin/", "/usr/local/bin/", "/usr/bin/", "/bin/local/", "/bin/local/"])
+print (d.order())
