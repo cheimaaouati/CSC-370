@@ -1,5 +1,4 @@
 
-# Online Python - IDE, Editor, Compiler, Interpreter
 class Dirsort:
     def __init__ (self, dirs):
         self.d = []
